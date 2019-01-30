@@ -7,20 +7,28 @@ public class MainPunto{
 
     float coordenadaX, coordenadaY;
 
-    coordenadaX = 16.9827;
-    coordenadaY = 19.3721;
+    coordenadaX = 169827;
+    coordenadaY = 193721;
 
-    
+    Punto p0 = new Punto(coordenadaX, coordenadaY);
 
-    System.out.println("Inserta el valor x: ");
-    coordenadaX = lectura.nextFloat();
+    System.out.println("Desea cambiar el punto?");
+    String opc = lectura.nextLine();
 
-    System.out.println("Inserta el valor de y: ");
-    coordenadaY = lectura.nextFloat();
+    if (opc.equalsIgnoreCase("si")) {
 
-    Punto p1 = new Punto(coordenadaX, coordenadaY);
+      System.out.println("Inserta el valor x: ");
+      coordenadaX = lectura.nextFloat();
 
-    p1.imprimeCoordenadas();
+      System.out.println("Inserta el valor de y: ");
+      coordenadaY = lectura.nextFloat();
+
+      Punto p1 = new Punto(coordenadaX, coordenadaY);
+
+      p1.imprimeCoordenadas();
+    }else
+
+    p0.imprimeCoordenadas();
 
   }
 
