@@ -30,7 +30,7 @@ class Punto {
 
     public void imprimeCoordenadas(){
 
-      System.out.println("Las coordenadas son ("+coordenadaX+", "+coordenadaY+")");
+      System.out.println("Las coordenadas son: ("+coordenadaX+", "+coordenadaY+")");
 
     } // imprime las coordenadas del punto
 } // sin ; final si es Java

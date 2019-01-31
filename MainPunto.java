@@ -12,6 +12,8 @@ public class MainPunto{
 
     Punto p0 = new Punto(coordenadaX, coordenadaY);
 
+    p0.imprimeCoordenadas();
+
     System.out.println("Desea cambiar el punto?");
     String opc = lectura.nextLine();
 
@@ -28,7 +30,7 @@ public class MainPunto{
       p1.imprimeCoordenadas();
     }else
 
-    p0.imprimeCoordenadas();
+    System.out.println("FIN");
 
   }
 
