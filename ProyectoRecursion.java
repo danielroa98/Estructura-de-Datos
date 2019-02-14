@@ -1,25 +1,70 @@
+/*
+ *--------------PROYECTO 2---------------*
+ *--------------Recursión----------------*
+ *--------------Daniel Roa---------------*
+ *.........-..14/Febrero/2019------------*
+ *--------------A01021960----------------*
+ */
+
 import java.util.*;
 
 public class ProyectoRecursion{
-
+/*
   public String limpiaString(String s){
-    return s;
-  }
 
-  /*
+    int A = s.length();
+
+    if (A == 0) {
+      return s;
+    }
+      else if()
+
+
+  }
+*/
   public int cuentaSubString(String s, String sub){
 
-  }
+    int A = s.length();
+    int B = sub.length();
+
+    if (A == 0 ||A < B) {
+      return 0;
+    }
+
+    else if (s.substring(0, B).equals(sub)) {
+      return cuentaSubString(s.substring(B - 1), sub) + 1;
+    }
+    else
+      return cuentaSubString(s.substring(B - 1), sub);
+
+  }//fin cuentaSubString
 
   public int sumaDigitos(int n){
 
-  }
+    int total;
 
+    total = n % 10;
+
+    if (n <= 0) {
+      return n;
+    }//fin IF
+      else{
+        return total + sumaDigitos(n / 10);
+      }//fin ELSE
+
+  }//fin sumaDigitos
+
+/*
   public boolean anidacionCorrecta(String s){
 
-  }
+    int A = s.length();
 
-  */
+    if () {
+
+    }
+
+  }
+*/
   public static void main(String[] args) {
     Scanner lectura = new Scanner(System.in);
     Scanner lecturaS = new Scanner(System.in);
@@ -33,18 +78,13 @@ public class ProyectoRecursion{
 
     System.out.println("\nBienvenido al sistema");
 
-    System.out.println("Que operación le gustaría realizar: \n1)Limpiar un String \n2)Contar un substring \n3)Sumar digitos \n4)Verificar una anidación");
-    opcion = lectura.nextInt();
-
-    switch (opcion) {
-
-      case 1:
-        System.out.println("\nInserta el String: ");
-        String s = lecturaS.nextLine();
-
+        System.out.println("\nInserta el numero: ");
+        int num = lecturaS.nextInt();
 
         //System.out.println(sucio);
-        resultado = obj.limpiaString(s);
-    }//fin switch
+        results = obj.sumaDigitos(num);
+
+        System.out.println("\n"+results);
+
   }
 }
