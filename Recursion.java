@@ -65,20 +65,40 @@ public class Recursion {
   }
  }
 
- public int fibonacci(int n) {
+ public int fibonacci(int n) {//modo recursivo
+
+   if (n <= 1) {
+     return n;
+   }
+   else
+   return fibonacci(n-1) + fibonacci(n-2);
+
+ }
+
+ public int fibArreglo(int n){ //modo iterativo
+
+   int[] F = new int[n+1];
+   F[0] = 0;
+   F[1] = 1;
+
+   for (int i = 2; i<=n; i++)
+     F[i] = F[i-1] + F[i-2];
+
+     return F[n];
 
  }
 
  public static void main(String[] args) {
   int res = 0;
-
   String s;
-
   Recursion miObjeto = new Recursion();
 
-  res = miObjeto.vowels("¨Prueba de vocales");
+  res = miObjeto.fibArreglo(50);
+  System.out.println(res);
 
+  /*
   System.out.print("\nEl resultado es: ");
   System.out.print(res + " vocales\n");
+    */
  }
 }
