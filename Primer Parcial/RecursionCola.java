@@ -28,7 +28,7 @@ public class RecursionCola{
     } else
       return maxTail(A[pos], maxTail(n, pos+1));
   }
-
+/*
   public int maximoTail(int n, int pos, int m){
 
     if (pos == n) {
@@ -38,8 +38,8 @@ public class RecursionCola{
       if (m > A[pos]) {
 
       } else
-        return q
-  }
+        return q;
+  }*/
 
   public static void main(String[] args) {
 
@@ -48,8 +48,8 @@ public class RecursionCola{
     RecursionCola obj = new RecursionCola();
 
     //res = obj.fact(6,1);
-    //res = obj.sumaTail(9, 4, 0);
-    res = obj.maximoTail(5, 0, obj.A[0]);
+    res = obj.sumaTail(9, 4, 0);
+    //res = obj.maximoTail(5, 0, obj.A[0]);
 
     System.out.println(res);
   }

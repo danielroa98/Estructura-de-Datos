@@ -19,7 +19,7 @@ public class Recursion{
         return limpiaString(s.substring(1));
       }
       else
-        return s.charAt(0)+limpiaString(s.length(1));
+        return s.charAt(0)+limpiaString(s.substring(1));
 
   }
 
@@ -61,7 +61,6 @@ public class Recursion{
     int A = s.length();
 
     char C = '(';
-
     char D = ')';
 
     boolean salida = false;
@@ -77,6 +76,5 @@ public class Recursion{
     else if (mod == 2) {
       return true;
       }
-    }
-  }
+    }//fin operacion booleana
 }
